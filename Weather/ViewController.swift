@@ -10,10 +10,11 @@ import UIKit
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
-    let cityNamesArray = ["Fairbanks", "Amsterdam", "Dallas", "Adis Ababa"]
-    let temperaturesArray = ["37", "57", "47", "80"]
-    let timesArray = ["08:15 AM", "10:15 AM", "09:15 PM", "06:15 PM"]
-    let colorsArray = [UIColor.black, UIColor.red, UIColor.blue, UIColor.gray]
+    var cityNamesArray = ["Fairbanks", "Amsterdam", "Dallas", "Adis Ababa"]
+    var temperaturesArray = ["37", "57", "47", "80"]
+    var timesArray = ["08:15 AM", "10:15 AM", "09:15 PM", "06:15 PM"]
+    var colorsArray = [UIColor.black, UIColor.red, UIColor.blue, UIColor.gray]
+    @IBOutlet weak var weatherListTableView:UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +26,24 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func addCityTapped(_ sender: UIButton) {
+    
+        let mainSB = UIStoryboard(name: "Main", bundle: nil)
+        let addCityVC = mainSB.instantiateViewController(withIdentifier: "ADDCITY-VC") as! AddCityViewController
+        
+        addCityVC.didSaveCityName = {
+            (cityName:String) in
+            print("received city name: " + cityName)
+            self.cityNamesArray.append(cityName)
+            self.temperaturesArray.append("00")
+            self.timesArray.append("HH:MM a")
+            self.colorsArray.append(UIColor.darkGray)
+            self.weatherListTableView.reloadData()
+        }
+        
+        self.present(addCityVC, animated: true, completion: nil)
+    }
+    
     //MARK:- UITableViewDataSource
     
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{

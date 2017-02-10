@@ -12,6 +12,7 @@
 		52255DC71E26C7BA008E0700 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52255DC51E26C7BA008E0700 /* Main.storyboard */; };
 		52255DC91E26C7BA008E0700 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52255DC81E26C7BA008E0700 /* Assets.xcassets */; };
 		52255DCC1E26C7BA008E0700 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52255DCA1E26C7BA008E0700 /* LaunchScreen.storyboard */; };
+		5278F6931E4E4E4A003FE0DA /* AddCityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5278F6921E4E4E4A003FE0DA /* AddCityViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		52255DC81E26C7BA008E0700 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		52255DCB1E26C7BA008E0700 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		52255DCD1E26C7BA008E0700 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5278F6921E4E4E4A003FE0DA /* AddCityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddCityViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			children = (
 				52255DC11E26C7BA008E0700 /* AppDelegate.swift */,
 				52255DC31E26C7BA008E0700 /* ViewController.swift */,
+				5278F6921E4E4E4A003FE0DA /* AddCityViewController.swift */,
 				52255DC51E26C7BA008E0700 /* Main.storyboard */,
 				52255DC81E26C7BA008E0700 /* Assets.xcassets */,
 				52255DCA1E26C7BA008E0700 /* LaunchScreen.storyboard */,
@@ -138,6 +141,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				52255DC41E26C7BA008E0700 /* ViewController.swift in Sources */,
+				5278F6931E4E4E4A003FE0DA /* AddCityViewController.swift in Sources */,
 				52255DC21E26C7BA008E0700 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -302,6 +306,7 @@
 				52255DD21E26C7BA008E0700 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
